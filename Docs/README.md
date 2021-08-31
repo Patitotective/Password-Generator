@@ -1,7 +1,7 @@
 # Password Generator GUI
 A simple password generator with graphical interface.
 
-[![Screenshot Version](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)
+[![**Password Generator _GUI_** interface screenshot](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)
 
 ## Settings
 - Length of the password.
@@ -14,7 +14,7 @@ A simple password generator with graphical interface.
 
 ## Installation
 You can go to the [**Release Page**](https://github.com/Patitotective/Password-Generator-GUI/releases/tag/v0.1) and download `Password_Generator_GUI.exe` for _Windows_ or `Password_Generator_GUI.bin` for _Linux_.  
-Or click [this link for _Windows_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/v0.1/Password_Generator_GUI.exe) or [this for _Linux_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/v0.1/Password_Generator_GUI.bin).  
+Or click [this link for _Windows_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/v0.1/Password_Generator_GUI.exe) and [this for _Linux_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/v0.1/Password_Generator_GUI.bin).  
 
 ## Run application from source code
 1. First you need to clone this repository by pasting this command into your terminal:
@@ -46,7 +46,7 @@ python3 main.py
 
 ## Links
 
-- GitHub page: [https://github.com/Patitotective/password_generator_gui](https://github.com/Patitotective/Password-Generator-GUI).
+- GitHub page: [https://github.com/Patitotective/Password-Generator-GUI](https://github.com/Patitotective/Password-Generator-GUI).
 
 - Contact me:
   - Discord: **patitotective#0127**.
