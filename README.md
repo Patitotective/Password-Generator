@@ -15,8 +15,8 @@ A simple password generator with graphical interface.
 ## Installation
 In the [**Release Page**](https://github.com/Patitotective/Password-Generator-GUI/releases/latest) download `Password_Generator_GUI.exe` for _Windows_ and `Password_Generator_GUI.bin` for _Linux_.  
 Direct links:
-- _Windows_: https://github.com/Patitotective/Password-Generator-GUI/releases/download/latest/Password_Generator_GUI.exe.
-- _Linux_: https://github.com/Patitotective/Password-Generator-GUI/releases/download/latest/Password_Generator.bin.  
+- [_Windows_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/v0.1/Password_Generator_GUI.exe).
+- [_Linux_](https://github.com/Patitotective/Password-Generator-GUI/releases/download/latest/Password_Generator.bin).
 
 ## Run application from source code
 1. First you need to clone this repository by pasting this command into your terminal:
