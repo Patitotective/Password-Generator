@@ -1,7 +1,7 @@
 # Password Generator GUI
 A simple password generator with graphical interface.
 
-[![**Password Generator _GUI_** interface screenshot](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)
+[![**Password Generator _GUI_** interface screenshot](https://github.com/Patitotective/password_generator_gui/blob/main/Images/screenshot.png)](https://github.com/Patitotective/password_generator_gui/blob/main/img/screenshot.png)
 
 ## Settings
 - Length of the password.
