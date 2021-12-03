@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
 
 a = Analysis(['main.py'],
              #pathex=['C:\\Users\\crist\\Documents\\password_generator_gui\\Code'], # Windows
-             pathex=['/home/cristobal/Documents/Projects/password_generator_gui/Code'], # Linux
+             pathex=['.'], 
              binaries=[],
              datas=[],
              hiddenimports=hiddenimports,
@@ -30,6 +30,7 @@ exe = EXE(pyz,
           a.datas,  
           [],
           name='Password Generator',
+          icon="img/icon.png", 
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,

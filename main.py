@@ -14,12 +14,15 @@ import pyperclip
 import PREFS
 
 # Dependencies
-import resources # .qrc file (Qt Resources)
-import password_generator as password
-from scrollable import ScrolLabel
+import src.resources as resoruces # .qrc file (Qt Resources)
+import src.password_generator as password
+from src.scrollable import ScrolLabel
+
 
 class MainWindow(QMainWindow):
+	
 	resized = QtCore.pyqtSignal()
+	
 	def __init__(self, title, parent=None):
 		super().__init__(parent)
 		
@@ -163,14 +166,12 @@ class MainWindow(QMainWindow):
 
 	def close_app(self):
 		self.close()
-		try:
+
+		if self.app_widget.settings_dialog is not None and self.app_widget.settings_dialog.isVisible():
 			self.app_widget.settings_dialog.close()
-		except:
-			pass
-		try:
+
+		if self.app_widget.about_me_dialog is not None and self.app_widget.about_me_dialog.isVisible():
 			self.app_widget.about_me_dialog.close()
-		except:
-			pass
 
 	def closeEvent(self, event):
 		self.close_app()
@@ -181,6 +182,8 @@ class MainWidget(QWidget):
 		super().__init__()
 
 		self.parent = parent
+		self.settings_dialog = None
+		self.about_me_dialog = None
 		self.widgets = {
 			"logo": [], 
 			"generate_btn": [], 
@@ -193,9 +196,17 @@ class MainWidget(QWidget):
 		self.create_window()
 
 	def init_prefs(self):
-		prefs = {"lowercase": True, "uppercase": True, "digits": True, "punctuation": True, "repeated_char": False, "consecutive_char": False, "length":15}
+		default_prefs = {
+			"lowercase": True, 
+			"uppercase": True, 
+			"digits": True, 
+			"punctuation": True, 
+			"repeated_char": False, 
+			"consecutive_char": False, 
+			"length":15
+		}
 
-		self.settings = PREFS.PREFS(prefs, filename="Prefs/settings")
+		self.settings = PREFS.Prefs(default_prefs, filename="Prefs/settings")
  
 	def create_window(self):
 		##### Creating window
@@ -316,7 +327,7 @@ class MainWidget(QWidget):
 			length_spinbox.setValue(self.settings.file["length"])
 
 		######## SET UP DIALOG ########
-		dialog = QDialog() # Creating dialog
+		dialog = QDialog(self) # Creating dialog
 
 		dialog.setWindowTitle("Settings") # Setting dialog title
 
@@ -346,6 +357,7 @@ class MainWidget(QWidget):
 			*::indicator{
 				width: 15px;
 				height: 15px;
+				background: white;
 			}
 			*::indicator:checked {
 				image: url(:/checkbox_checked.png);
@@ -525,7 +537,7 @@ class MainWidget(QWidget):
 		dialog.layout().addWidget(about_prefs_label, 1, 0, 1, 1)
 		dialog.layout().addWidget(QLabel(), 2, 0, 1, 1)
 		dialog.layout().addWidget(source_code_link, 3, 1)
-		dialog.layout().addWidget(QLabel("v0.1"), 3, 0)
+		dialog.layout().addWidget(QLabel("v0.2"), 3, 0)
 
 		self.about_me_dialog = dialog
 
